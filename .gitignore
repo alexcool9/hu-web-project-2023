@@ -28,7 +28,6 @@ client/node_modules
 
 # Generated / Auto-generated files
 /dist
-/client/dist
 /dist-ssr
 .eslintcache
 
