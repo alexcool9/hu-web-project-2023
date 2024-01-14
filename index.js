@@ -41,7 +41,7 @@ app.listen(port, ()=>{
 });
 
 mongoose
-  .connect(process.env.DB1 || 'mongodb://127.0.0.1:27017/test_alex')
+  .connect(process.env.DB || 'mongodb://127.0.0.1:27017/test_alex')
   .then((x) => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
