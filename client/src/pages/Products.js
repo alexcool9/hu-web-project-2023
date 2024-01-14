@@ -36,7 +36,7 @@ const Products = () => {
             <div>
                 <NavBar />
             </div>
-            <div className="flex justify-center items-center mt-8 w-full bg-white py-12 lg:py-24 bg-gray-200 min-w-fit"  x-data="{'layout': 'list'}">
+            <div className="flex justify-center items-center mt-8 w-full bg-white py-12 lg:py-20 bg-gray-200 min-w-fit"  x-data="{'layout': 'list'}">
 
                 <div 
                     className="mx-auto bg-gray-200 mb-24 min-w-full max-w-screen-lg"
