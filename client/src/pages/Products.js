@@ -3,6 +3,8 @@ import Footer from '../components/Footer';
 import Cards from '../components/Services';
 import NavBar from '../components/Navbar/NavBar';
 import useCards from './../hooks/useCards';
+import AddNewCard from './AddNewCard';
+
 import { useUser } from './../users/providers/UserProvider';
 
 
@@ -48,29 +50,38 @@ const Products = () => {
                             <a href="#" className={`inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300 ${selectedTab === 'fav' && 'active bg-gray-100 dark:bg-gray-800'}`} onClick={()=>{setSelectedTab('fav'); handleGetFavCards()}}>Favorite Cards</a>
                         </li>
                         <li className="me-2">
-                            <a href="#" className={`inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300 ${selectedTab === 'self' && 'active bg-gray-100 text-blue-600'}`} onClick={()=>{setSelectedTab('self'); handleGetMyCards()}}>My Card</a>
+                            <a href="#" className={`inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300 ${selectedTab === 'self' && 'active bg-gray-100 text-blue-600 dark:bg-gray-800'}`} onClick={()=>{setSelectedTab('self'); handleGetMyCards()}}>My Card</a>
                         </li>
                         <li className="me-2">
-                            <a href="#" className={`inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300 ${user.isBusiness && 'cursor-not-allowed'}`} >Add Card +</a>
+                            <a href="#" className={`inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300 ${!user.isBusiness && 'cursor-not-allowed'} ${selectedTab === 'newCard' && 'active bg-gray-100 text-blue-600 dark:bg-gray-800'}`}  onClick={()=>{setSelectedTab('newCard')}}>Add Card +</a>
                         </li>
                         {/* <li>
                             <a className="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
                         </li> */}
                     </ul>
                 
-                    <nav className="p-4 bg-indigo-700 text-indigo-100">
-                        Layout:
-                        <button type="button" className={`mx-1 px-2 py-1 hover:bg-indigo-900 ${layout === 'list' ? 'bg-indigo-800' : '' }`} onClick={()=>layoutToggle('list')}>List</button>
-                        <button type="button" className={`mx-1 px-2 py-1 hover:bg-indigo-900 ${layout === 'grid' ? 'bg-indigo-800' : '' }`} onClick={()=>layoutToggle('grid')}>Grid</button>
-                    </nav>
-                    <section className="flex flex-wrap">
-                        <Cards
-                            layout={layout}
-                            products={filteredCards}
-                            onLike={changeLikeStatus}
-                            onDelete={handleDeleteCard}
-                        />
-                    </section>
+                    {
+                        selectedTab !== 'newCard' &&
+                        <nav className="p-4 bg-indigo-700 text-indigo-100">
+                            Layout:
+                            <button type="button" className={`mx-1 px-2 py-1 hover:bg-indigo-900 ${layout === 'list' ? 'bg-indigo-800' : '' }`} onClick={()=>layoutToggle('list')}>List</button>
+                            <button type="button" className={`mx-1 px-2 py-1 hover:bg-indigo-900 ${layout === 'grid' ? 'bg-indigo-800' : '' }`} onClick={()=>layoutToggle('grid')}>Grid</button>
+                        </nav>
+                    }
+                    {
+                        selectedTab !== 'newCard' &&
+                            <section className="flex flex-wrap">
+                                    <Cards
+                                        layout={layout}
+                                        products={filteredCards}
+                                        onLike={changeLikeStatus}
+                                        onDelete={handleDeleteCard}
+                                    />
+                            </section>
+                    }
+                    {
+                        selectedTab === 'newCard' && <AddNewCard/>
+                    }
 
 
                 </div>
