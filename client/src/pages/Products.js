@@ -53,7 +53,7 @@ const Products = () => {
                             <a href="#" className={`inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300 ${selectedTab === 'self' && 'active bg-gray-100 text-blue-600 dark:bg-gray-800'}`} onClick={()=>{setSelectedTab('self'); handleGetMyCards()}}>My Card</a>
                         </li>
                         <li className="me-2">
-                            <a href="#" className={`inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300 ${!user.isBusiness && 'cursor-not-allowed'} ${selectedTab === 'newCard' && 'active bg-gray-100 text-blue-600 dark:bg-gray-800'}`}  onClick={()=>{setSelectedTab('newCard')}}>Add Card +</a>
+                            <a href="#" className={`inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300 ${!user?.isBusiness && 'cursor-not-allowed'} ${selectedTab === 'newCard' && 'active bg-gray-100 text-blue-600 dark:bg-gray-800'}`}  onClick={()=>{setSelectedTab('newCard')}}>Add Card +</a>
                         </li>
                         {/* <li>
                             <a className="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">Disabled</a>
