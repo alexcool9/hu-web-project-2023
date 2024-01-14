@@ -1,16 +1,13 @@
 import React from 'react';
 import { useEffect } from "react";
-import Clients from '../components/Clients';
+import NavBar from '../components/Navbar/NavBar';
 import Cta from '../components/Cta';
-import Footer from '../components/Footer';
-import Hero from '../components/Hero';
 import Intro from '../components/Intro';
-import Portfolio from '../components/Portfolio';
-import Products from '../components/Services';
+import Footer from '../components/Footer';
 
 import useCards from '../hooks/useCards';
 
-const Home = () => {
+const About = () => {
     const { value, handleGetCards, handleDeleteCard } = useCards();
     const { cards, error, isPending, filteredCards = [] } = value;
 
@@ -25,20 +22,18 @@ const Home = () => {
 
     return (
         <>
-            <Hero />
-            <Products 
-                layout={'grid'}
-                products={filteredCards}
-            />
-            <Intro />
-            {/* <Portfolio /> */}
-            <Clients />
-            {/* <Cta/> */}
+            <div>
+                <NavBar />
+            </div>
+            <div className="mt-16">
+                <Intro />
+                <Cta/>
+            </div>
             <Footer />
         </>
 
     )
 }
 
-export default Home;
+export default About;
 

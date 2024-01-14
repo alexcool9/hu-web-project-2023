@@ -20,7 +20,6 @@ Router.get("/", async (req, res, next)=>{
     catch(error) {
         return next(error);
     }
-
 });
 
 /**
@@ -92,6 +91,22 @@ Router.put("/:id", [auth.verifyToken], async (req,res)=>{
     catch(error){
         res.json(error); 
     }
+});
+
+/**
+ * No 2
+ * Get User Cards 
+ */
+Router.get("/my-cards", [auth.verifyToken], async (req, res, next)=>{
+
+    try {
+        console.log('my-cards', req.user);
+        const data = await Card.find({ user_id: req.user._id });
+        res.json(data);
+    }
+    catch(error) {
+       res.json(error);
+    }
 
 });
 
@@ -99,7 +114,7 @@ Router.put("/:id", [auth.verifyToken], async (req,res)=>{
  * No 6
  * Change card likes status (by id)
  */
-Router.patch("/:id", [auth.verifyToken], async (req,res)=>{
+Router.patch("/:id", [auth.verifyToken], async (req,res,next)=>{
 
     try {
         const card = await Card.findById(req.params.id);
@@ -116,7 +131,7 @@ Router.patch("/:id", [auth.verifyToken], async (req,res)=>{
         res.json(card);
     }
     catch(error){
-       res.json(error); 
+        return next(error); 
     }
     
 });

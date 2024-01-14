@@ -40,15 +40,15 @@ let userSchema = new Schema(
             },
             city: {
                 type: String,
-                required: true,
+                required: false,
             },
             city: {
                 type: String,
-                required: true,
+                required: false,
             },
             street: {
                 type: String,
-                required: true,
+                required: false,
             },
             zip: {
                 type: Number,
@@ -94,7 +94,7 @@ const validate = (user) => {
         email: Joi.string().email().required(),
         password: Joi.string().required(),
         phone: Joi.string().required(),
-        address: Joi.object().required(),
+        address: Joi.object().optional(),
         image: Joi.object().optional(),
         isBusiness: Joi.boolean().required()
     });

@@ -4,7 +4,7 @@ const NotLogged = () => {
 
   return (
     <>
-      Not Logged
+      Or register
     </>
   );
 };

@@ -16,11 +16,11 @@ Router.post("/", async (req,res)=>{
     try {
         const { error } = validate(req.body);
 
-        if (error) return res.status(400).send(error.details[0].message);
+        if (error) return res.status(400).send({ errors: error.details[0].message });
 
         // find exist user
         const existUser = await User.findOne({ email: req.body.email });
-        if (existUser) return res.status(400).send("Invalid email, already exists");
+        if (existUser) return res.status(400).send({ errors:"Invalid email, already exists" });
         
         const user = new User(req.body);
 
@@ -60,6 +60,7 @@ Router.post("/login", async (req,res)=>{
         const token = user.generateAuthToken();
         res.send(token);
     } catch (error) {
+        console.log('error', error);
         res.json({errors: "An error occured"});
     }
 

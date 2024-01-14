@@ -12,7 +12,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(cors({origin: 'http://localhost:8181'}));
+app.use(cors({
+  "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
+}));
+app.use((req,res,next)=>{
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 //Health check
 app.get("/", (req, res)=>{

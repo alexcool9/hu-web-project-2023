@@ -1,16 +1,7 @@
 import React from 'react';
 import Product from './Product/Product'
-// import img from '../images/web.svg'; 
-// import img2 from '../images/app.svg';
-// import img3 from '../images/hosting.svg';
-// import img4 from '../images/consultation.svg';
 
-var img = 'https://images.ctfassets.net/x0wnv07j8mtt/skuPrimaryImage3638/44f277c78004ce3d6ac6a2813db2d58c/Spearmint_5ml_US_Website_2021.png?q=75&fm=jpg&w=1080&h=1080';
-var img2 = 'https://images.ctfassets.net/x0wnv07j8mtt/skuPrimaryImage3587/6bd5ceaf0b8120d8b236c62bc26ff1d0/TeaTree_15ml_US_Website_2022.png?q=75&fm=jpg&w=1080&h=1080';
-var img3 = 'https://images.ctfassets.net/x0wnv07j8mtt/skuPrimaryImage3575/933bc4141110956d44d57cddaeefb089/Lavender_15ml_US_Website_2022.png?q=75&fm=jpg&w=1080&h=1080';
-var img4 = 'https://images.ctfassets.net/x0wnv07j8mtt/skuPrimaryImage32013/facd1ea91627e63d228787c17626479c/32013.png';
-
-const Products = ({products}) => {
+const Products = ({products, layout, onLike, onDelete}) => {
 
     if (!products || !products.length) {
     return (
@@ -19,60 +10,31 @@ const Products = ({products}) => {
   }
 
     return (
-        <div id="services" className="bg-gray-100 py-12" >
+        <div id="services" className="bg-gray-100" >
             <section data-aos="zoom-in-down">
-                    <div className="my-4 py-4">
+                    {/* <div className="my-4 py-4">
                         <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">Products</h2>
                         
                         <div className='flex justify-center'>
                             <div className='w-24 border-b-4 border-blue-900'></div>
                         </div>
                         <h2 className="mt-4 mx-12 text-center text-xl lg:text-2xl font-semibold text-blue-900">We are deeply committed to the growth and success of our clients.</h2>
-                    </div>
+                    </div> */}
 
-                    <div className="px-12" data-aos="fade-down" data-aos-delay="600">
-                        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    {/* data-aos="fade-down" data-aos-delay="600" */}
+                    <div className='p-12'>
+                        <div className={layout === 'grid' && 'grid sm:grid-cols-2 lg:grid-cols-4 gap-5'}>
                             
                             {/* PRODUCTS */}
                             {products.map((card) => 
                                 <Product
                                     key={card._id}
                                     card={card}
+                                    layout={layout}
+                                    onLike={onLike}
+                                    onDelete={onDelete}
                                 ></Product>   
                             )}
-
-                            {/* PRODUCT */}
-                            {/* <Product
-                                title="Spearmint essential Oil"
-                                description="Spearmint essential oil provides aromatic comfort during times of occasional uneasiness when diffused or applied topically. Taken internally, it may provide digestive and general wellness support"
-                                img={img}
-                                price={12.5}
-                            >
-                            </Product> */}
-
-                            {/* PRODUCT */}
-                            {/* <Product
-                                title="Tea Tree essential Oil"
-                                description={"Tea Tree (Melaleuca alternifolia) oil is very versatile, supporting healthy-looking skin and nails, neutralizing odors, and promoting the appearance of healthy hair and scalp"}
-                                img={img2}
-                                price={12.5}
-                            ></Product> */}
-
-                            {/* PRODUCT */}
-                            {/* <Product
-                                title="Lemon Verbena essential Oil"
-                                description={"Lemon Verbena essential oil is a vibrant boost that can be used to refresh your environment, cleanse your skin, and invigorate your sensesp"}
-                                img={img3}
-                                price={12.5}
-                            ></Product> */}
-
-                            {/* PRODUCT */}
-                            {/* <Product
-                                title="Lavender essential Oil"
-                                description={"Lavender oil is the most universal oil and has a tranquil aroma that is soothing to the senses, as well as to the skin when applied topically. Taken internally, it contains antioxidants, may provide immune support, and can be used to add a floral flavor to your evening tea."}
-                                img={img4}
-                                price={12.5}
-                            ></Product> */}
                 
                         </div>
                     </div>

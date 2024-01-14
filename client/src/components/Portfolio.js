@@ -5,7 +5,7 @@ const Portfolio = () => {
     return (
         <>
             <div className="my-4 py-4" id='portfolio'>
-                <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">Products</h2>
+                <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">Reviews</h2>
                 <div className='flex justify-center'>
                     <div className='w-24 border-b-4 border-blue-900 mb-8'></div>
                 </div>
@@ -14,12 +14,11 @@ const Portfolio = () => {
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">                            
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:scale-105 rounded-lg shadow-2xl p-3 min-h-max">
                             <div className="m-2 text-justify text-sm">
-                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">Business Management System</h4>
-                                <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                    Our Business Management System is a robust and easily scalable system that streamlines business operations, increase efficiency, and ultimately drive growth and profitability for your business.
-                                    With features such as employee management, finance control, and many more modules to effectively manage all aspects of a business.
-                                    All data is stored in the cloud and as such it is easily accessible from all devices and from any location.
+                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">"Amazing!"</h4>
+                                <p className="text-md font-medium leading-5 h-auto md:h-36">
+                                “Young living is an amazing company that has helped impact so many families but especially my own- over the last four years I’ve been using these products in my home.”
                                 </p>
+                                <h4 className="font-semibold my-8 text-sm md:text-md text-center mb-4 h-12">-Kelsey, California</h4>
                                 <div className="flex justify-center my-4">
                                     <Link to="/get-demo" className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
                                         Schedule Demo
@@ -31,12 +30,12 @@ const Portfolio = () => {
 
                         <div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:scale-105 rounded-lg shadow-2xl p-3">
                             <div className="m-2 text-justify text-sm">
-                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">School Management Portal</h4>
-                                <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                    Our all encompassing School Management Portal is the only solution needed for any institution.
-                                    The School Management Portal (SMP) is a tool that can help educational institutions of all kinds manage their administrative tasks, automate processes, and streamline communication between teachers, students, parents, and administrators. 
-                                    The software can be used to manage all aspects of school operations, including student enrollment, attendance, grades, schedules, and more.
+                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">"Incredible"</h4>
+                                <p className="text-md font-medium leading-5 h-auto md:h-36">
+                                “Young Living has incredible standards for their essential oils, which is why they are the only essential oils I use and trust.”
+
                                 </p>
+                                <h4 className="font-semibold my-8 text-sm md:text-md text-center mb-4 h-12">-Anna, Arizona</h4>
                                 <div className="flex justify-center my-4">
                                     <Link to="/get-demo" className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
                                         Schedule Demo
@@ -59,11 +58,12 @@ const Portfolio = () => {
 
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:scale-105 rounded-lg shadow-2xl p-3">
                             <div className="m-2 text-justify text-sm">
-                            <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">Payroll Management System</h4>
-                                <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                    The Payroll Management System automates the process of employee payments for businesses and organizations of different sizes. It helps to ensure that your employees get paid accurately and on time, while also reducing the time and effort required to manage payroll manually, with this system in place, you enjoy benefits such as: 
-                                    increased accuracy in employee payments. It can also integrate into an existing management system through well-structured APIs.
+                            <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">"Beyond words"</h4>
+                                <p className="text-md font-medium leading-5 h-auto md:h-36">
+                                    “Let me tell you, these tools have changed and enhanced my life beyond words. Thankful for this company, Young Living and all the goodness and gifts they have given me these past 2 years.”
                                 </p>
+                                
+                                <h4 className="font-semibold my-8 text-sm md:text-md text-center mb-4 h-12">-Natalie, Colorado</h4>
                                 <div className="flex justify-center my-4">
                                     <Link to="/get-demo" className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
                                         Schedule Demo
@@ -75,11 +75,11 @@ const Portfolio = () => {
 
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:scale-105 rounded-lg shadow-2xl p-3">
                             <div className="m-2 text-justify text-sm">
-                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">Event Management System</h4>
-                                <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                    Our event management system helps to manage different types of events, whether weddings, burials or any kind of event. With an easily customizable menu, you get to define your user experience and make your event fully customizable and memorable.
-                                    With use cases already recorded for quite a number of events, we can assure you of a stress-less event mangement platform.
+                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">"Changed my life"</h4>
+                                <p className="text-md font-medium leading-5 h-auto md:h-36">
+                                    “Oils have completely changed my life & I will never look back! I continue my wellness journey, growing my oil collection and gaining new knowledge everyday.”
                                 </p>
+                                <h4 className="font-semibold my-8 text-sm md:text-md text-center mb-4 h-12">-Sarah</h4>
                                 <div className="flex justify-center my-4">
                                     <Link to="/get-demo" className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
                                         Schedule Demo

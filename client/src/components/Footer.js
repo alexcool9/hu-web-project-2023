@@ -17,9 +17,8 @@ const Footer = () => {
                             <h3 className="font-bold text-4xl mb-4">Living Oil</h3>
                             <div className='text-md font-medium text-gray-600'>
                                 <h5>Alex Haimov</h5>
-                                <p>Ilo Awela,</p>
-                                <p>Ota,</p>
-                                <p>Ogun State.</p>
+                                <p>Ahskelon,</p>
+                                <p>Israel.</p>
                             </div>
                         </div>
                     </div>
@@ -44,18 +43,9 @@ const Footer = () => {
                     <div className="col-span-6 md:col-span-6 lg:col-span-4 mx-auto">
                         <h6 className="text-[#013289] text-xl font-bold mb-4">OUR PRODUCTS</h6>
                         <ul className="text-md">
-                        <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Essential Oil</Link>
-                        </li>
-                        <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Mobile App Development</Link>
-                        </li>
-                        <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Domain and Hosting</Link>
-                        </li>
-                        <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">General IT Consultations</Link>
-                        </li>
+                            <li className="mb-2">
+                                <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Essential Oil</Link>
+                            </li>
                         </ul>
                     </div>
 

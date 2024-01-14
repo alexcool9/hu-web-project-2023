@@ -8,7 +8,7 @@ const useAxios = () => {
     const { token } = useUser()
 
     useEffect(() => {
-        axios.defaults.headers.common["x-auth-token"] = token;
+        axios.defaults.headers.common["authorization"] = 'Bearer ' + token;
 
         // if (snack) {
             axios.interceptors.request.use((data) => {
@@ -18,7 +18,8 @@ const useAxios = () => {
 
             axios.interceptors.response.use(null, (error) => {
                 const expectedError = error.response && error.response.status >= 400;
-                if (expectedError) alert(error.message,"error" );
+                // if (expectedError) alert(error.message,"error" );
+                console.log('expectedError', error.message);
                 return Promise.reject(error);
             });
         // }

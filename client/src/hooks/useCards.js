@@ -128,6 +128,8 @@ const useCards = () => {
             const favCards = cards.filter(
                 card => !!card.likes.find(id => id === user._id)// change to use includes
             );
+            console.log('favCards', filteredCards)
+
             requestStatus(false, null, favCards);
         } catch (error) {
             requestStatus(false, error, null);

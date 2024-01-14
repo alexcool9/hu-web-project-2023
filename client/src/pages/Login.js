@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
 import {useDocTitle} from '../components/CustomHook';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 // import emailjs from 'emailjs-com';
 import Notiflix from 'notiflix';
@@ -139,23 +140,28 @@ const Login = () => {
                 </div>
                 </form>
                         <div
-                            className="w-full  lg:-mt-96 lg:w-2/6 px-8 py-6 ml-auto bg-blue-900 rounded-2xl">
+                            className="w-full  lg:-mt-64 lg:w-2/6 px-8 py-6 ml-auto bg-blue-900 rounded-2xl">
                             <div className="flex flex-col text-white">
                                 
                     
-                    <div className="flex my-4 w-2/3 lg:w-1/2">
+                    <div className="flex my-4 w-2/3 lg:w-auto">
                         <div className="flex flex-col">
                         <i className="fas fa-phone-alt pt-2 pr-2" />
                         </div>
 
                         <div className="flex flex-col">
-                        <h2 className="text-2xl">Call Us</h2>
-                        <p className="text-gray-400">Tel: 08055384406</p>
+                        <h2 className="text-2xl">New User?</h2>
+                        {/* <p className="text-gray-400">Sign up now!</p> */}
                         
                             <div className='mt-5'>
-                                <h2 className="text-2xl">Send an E-mail</h2>
-                                <p className="text-gray-400">info@mld.ng</p>
+                                {/* <h2 className="text-2xl">Send an E-mail</h2> */}
+                                <p className="text-gray-400">Become a member</p>
                             </div>
+
+                            <Link to="/register" className="text-white bg-red-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0">
+                                Sign up
+                                <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
+                            </Link>
                        
                         </div>
                     </div>
